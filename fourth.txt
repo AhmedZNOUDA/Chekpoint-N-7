@@ -1,1 +1,94 @@
 
+1)
+$ mkdir learn_git_again
+
+2)
+$ cd learn_git_again
+
+3)
+$ echo > third.txt
+
+4)
+$ git init
+Initialized empty Git repository in C:/Users/ahmed/OneDrive/Bureau/learn_git_again/.git/
+
+5)
+$ git add third.txt
+warning: LF will be replaced by CRLF in third.txt.
+The file will have its original line endings in your working directory
+
+6)
+$ git commit -m "adding third.txt"
+[master (root-commit) 51c39fc] adding third.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 third.txt
+
+7)
+$ git log
+commit 51c39fc37e86e34d7a64f920cf23970e441a0c64 (HEAD -> master)
+Author: AhmedZNOUDA <75784043+AhmedZNOUDA@users.noreply.github.com>
+Date:   Tue Feb 9 21:44:50 2021 +0100
+
+    adding third.txt
+
+8)
+$ echo > fourth.txt
+
+9)
+$ git add fourth.txt
+warning: LF will be replaced by CRLF in fourth.txt.
+The file will have its original line endings in your working directory
+
+10)
+$ git commit -m "adding fourth.txt"
+[master e1c4c3e] adding fourth.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fourth.txt
+
+11)
+$ git rm third.txt
+rm 'third.txt'
+
+12)
+$ git add .
+
+13)
+$ git commit -m "removing third.txt"
+[master 30c654e] removing third.txt
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 third.txt
+
+14)
+$ git log
+commit 30c654ef9c49bd9a8621dc9e13a7ac9f6ab60b9c (HEAD -> master)
+Author: AhmedZNOUDA <75784043+AhmedZNOUDA@users.noreply.github.com>
+Date:   Tue Feb 9 21:47:27 2021 +0100
+
+    removing third.txt
+
+commit e1c4c3edab0cfdf1c3a00ae16e0aa8d5b21f3243
+Author: AhmedZNOUDA <75784043+AhmedZNOUDA@users.noreply.github.com>
+Date:   Tue Feb 9 21:46:24 2021 +0100
+
+    adding fourth.txt
+
+commit 51c39fc37e86e34d7a64f920cf23970e441a0c64
+Author: AhmedZNOUDA <75784043+AhmedZNOUDA@users.noreply.github.com>
+Date:   Tue Feb 9 21:44:50 2021 +0100
+
+    adding third.txt
+
+15)
+$ git config --global core.pager 'cat'
+
+16)
+$ git config --global --list
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=AhmedZNOUDA
+user.email=75784043+AhmedZNOUDA@users.noreply.github.com
+core.pager=cat
+
+
